@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://www.springframework.org/schema/beans" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:ns1="http://cxf.apache.org" name="MongoRest" targetNamespace="http://www.springframework.org/schema/beans">
+  <wsdl:import location="http://localhost:8081/mongodb/services/app?wsdl=app.wsdl" namespace="http://cxf.apache.org">
+    </wsdl:import>
+  <wsdl:binding name="MongoRestSoapBinding" type="ns1:app">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="all">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="all">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="allResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MongoRest">
+    <wsdl:port binding="tns:MongoRestSoapBinding" name="MongoRestImplPort">
+      <soap:address location="http://localhost:8081/mongodb/services/app"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

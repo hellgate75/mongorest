@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<context>
+    <journaled>false</journaled>
+    <servers>
+        <address>localhost</address>
+        <port>27017</port>
+        <family>IP_V4</family>
+        <credential>
+            <userName></userName>
+            <database></database>
+            <password></password>
+            <mechanism>NONE</mechanism>
+        </credential>
+    </servers>
+</context>

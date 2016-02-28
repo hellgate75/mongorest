@@ -1,0 +1,72 @@
+00:19:14,080 INFO  [org.jboss.as.configadmin] (ServerService Thread Pool -- 26) JBAS016200: Activating ConfigAdmin Subsystem
+00:19:14,091 INFO  [org.jboss.as.clustering.infinispan] (ServerService Thread Pool -- 31) JBAS010280: Activating Infinispan subsystem.
+00:19:14,152 INFO  [org.jboss.as.connector.subsystems.datasources] (ServerService Thread Pool -- 27) JBAS010403: Deploying JDBC-compliant driver class org.h2.Driver (version 1.3)
+00:19:14,170 INFO  [org.jboss.as.security] (ServerService Thread Pool -- 44) JBAS013101: Activating Security Subsystem
+00:19:14,178 INFO  [org.jboss.as.security] (MSC service thread 1-7) JBAS013100: Current PicketBox version=4.0.7.Final
+00:19:14,211 INFO  [org.jboss.as.naming] (ServerService Thread Pool -- 38) JBAS011800: Activating Naming Subsystem
+00:19:14,213 INFO  [org.jboss.as.webservices] (ServerService Thread Pool -- 48) JBAS015537: Activating WebServices Extension
+00:19:14,222 INFO  [org.jboss.as.osgi] (ServerService Thread Pool -- 39) JBAS011940: Activating OSGi Subsystem
+00:19:14,280 INFO  [org.jboss.as.connector] (MSC service thread 1-7) JBAS010408: Starting JCA Subsystem (JBoss IronJacamar 1.0.9.Final)
+00:19:14,318 INFO  [org.jboss.as.naming] (MSC service thread 1-3) JBAS011802: Starting Naming Service
+00:19:14,329 INFO  [org.jboss.as.mail.extension] (MSC service thread 1-5) JBAS015400: Bound mail session [java:jboss/mail/Default]
+00:19:14,680 INFO  [org.jboss.ws.common.management.AbstractServerConfig] (MSC service thread 1-7) JBoss Web Services - Stack CXF Server 4.0.2.GA
+00:19:14,730 INFO  [org.apache.coyote.http11.Http11Protocol] (MSC service thread 1-6) Starting Coyote HTTP/1.1 on http--127.0.0.1-8080
+00:19:14,900 INFO  [org.jboss.as.server.deployment.scanner] (MSC service thread 1-3) JBAS015012: Started FileSystemDeploymentService for directory C:\Lavoro\WORKSPACES\mongorest-workspace\mongodbmain\extensions\systemproperties\target\jboss-as-7.1.1.Final\standalone\deployments
+00:19:14,902 INFO  [org.jboss.as.remoting] (MSC service thread 1-4) JBAS017100: Listening on /127.0.0.1:9999
+00:19:14,902 INFO  [org.jboss.as.remoting] (MSC service thread 1-8) JBAS017100: Listening on /127.0.0.1:4447
+00:19:14,935 ERROR [org.jboss.msc.service.fail] (MSC service thread 1-6) MSC00001: Failed to start service jboss.serverManagement.controller.management.http: org.jboss.msc.service.StartException in service jboss.serverManagement.controller.management.http: Address already in use: bind /127.0.0.1:9990
+	at org.jboss.as.server.mgmt.HttpManagementService.start(HttpManagementService.java:210) [jboss-as-server-7.1.1.Final.jar:7.1.1.Final]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.startService(ServiceControllerImpl.java:1811) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at org.jboss.msc.service.ServiceControllerImpl$StartTask.run(ServiceControllerImpl.java:1746) [jboss-msc-1.0.2.GA.jar:1.0.2.GA]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145) [rt.jar:1.7.0_79]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615) [rt.jar:1.7.0_79]
+	at java.lang.Thread.run(Thread.java:745) [rt.jar:1.7.0_79]
+Caused by: java.net.BindException: Address already in use: bind
+	at sun.nio.ch.Net.bind0(Native Method) [rt.jar:1.7.0_79]
+	at sun.nio.ch.Net.bind(Net.java:444) [rt.jar:1.7.0_79]
+	at sun.nio.ch.Net.bind(Net.java:436) [rt.jar:1.7.0_79]
+	at sun.nio.ch.ServerSocketChannelImpl.bind(ServerSocketChannelImpl.java:214) [rt.jar:1.7.0_79]
+	at sun.nio.ch.ServerSocketAdaptor.bind(ServerSocketAdaptor.java:74) [rt.jar:1.7.0_79]
+	at org.jboss.sun.net.httpserver.ServerImpl.<init>(ServerImpl.java:144)
+	at org.jboss.sun.net.httpserver.HttpServerImpl.<init>(HttpServerImpl.java:54)
+	at org.jboss.sun.net.httpserver.DefaultHttpServerProvider.createHttpServer(DefaultHttpServerProvider.java:38)
+	at org.jboss.com.sun.net.httpserver.HttpServer.create(HttpServer.java:147)
+	at org.jboss.as.domain.http.server.ManagementHttpServer.create(ManagementHttpServer.java:145) [jboss-as-domain-http-interface-7.1.1.Final.jar:7.1.1.Final]
+	at org.jboss.as.server.mgmt.HttpManagementService.start(HttpManagementService.java:177) [jboss-as-server-7.1.1.Final.jar:7.1.1.Final]
+	... 5 more
+
+00:19:15,033 INFO  [org.jboss.as.connector.subsystems.datasources] (MSC service thread 1-2) JBAS010400: Bound data source [java:jboss/datasources/ExampleDS]
+00:19:15,245 INFO  [org.jboss.as.controller] (Controller Boot Thread) JBAS014774: Service status report
+JBAS014777:   Services which failed to start:      service jboss.serverManagement.controller.management.http: org.jboss.msc.service.StartException in service jboss.serverManagement.controller.management.http: Address already in use: bind /127.0.0.1:9990
+
+00:19:15,817 INFO  [org.jboss.as] (Controller Boot Thread) JBAS015954: Admin console is not enabled
+00:19:15,818 ERROR [org.jboss.as] (Controller Boot Thread) JBAS015875: JBoss AS 7.1.1.Final "Brontes" started (with errors) in 4701ms - Started 131 of 208 services (2 services failed or missing dependencies, 74 services are passive or on-demand)
+00:19:19,044 INFO  [org.jboss.as.repository] (management-handler-thread - 2) JBAS014900: Content added at location C:\Lavoro\WORKSPACES\mongorest-workspace\mongodbmain\extensions\systemproperties\target\jboss-as-7.1.1.Final\standalone\data\content\bc\3b78c976d8a792a5e24efc787961ac33c56ee8\content
+00:19:19,057 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015876: Starting deployment of "arquillian-service"
+00:19:19,337 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-2) JBAS018567: Deployment "deployment.arquillian-service" is using a private module ("org.jboss.as.jmx:main") which may be changed or removed in future versions without notice.
+00:19:19,338 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-2) JBAS018567: Deployment "deployment.arquillian-service" is using a private module ("org.jboss.as.server:main") which may be changed or removed in future versions without notice.
+00:19:19,339 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-2) JBAS018567: Deployment "deployment.arquillian-service" is using a private module ("org.jboss.as.osgi:main") which may be changed or removed in future versions without notice.
+00:19:19,341 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-2) JBAS018567: Deployment "deployment.arquillian-service" is using a private module ("org.jboss.jandex:main") which may be changed or removed in future versions without notice.
+00:19:19,342 WARN  [org.jboss.as.dependency.private] (MSC service thread 1-2) JBAS018567: Deployment "deployment.arquillian-service" is using a private module ("org.jboss.osgi.framework:main") which may be changed or removed in future versions without notice.
+00:19:19,611 INFO  [org.jboss.as.server] (management-handler-thread - 2) JBAS018559: Deployed "arquillian-service"
+00:19:20,124 INFO  [org.jboss.as.repository] (management-handler-thread - 3) JBAS014900: Content added at location C:\Lavoro\WORKSPACES\mongorest-workspace\mongodbmain\extensions\systemproperties\target\jboss-as-7.1.1.Final\standalone\data\content\1d\1fd168a477ddf6f5ea363f9b96be54ab61b9f5\content
+00:19:20,128 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015876: Starting deployment of "a21656c3-53d7-446a-a668-7c7e5a1402d0.war"
+00:19:20,291 INFO  [org.jboss.as.arquillian] (MSC service thread 1-4) Arquillian deployment detected: ArquillianConfig[service=jboss.arquillian.config."a21656c3-53d7-446a-a668-7c7e5a1402d0.war",unit=a21656c3-53d7-446a-a668-7c7e5a1402d0.war,tests=[org.jboss.arquillian.showcase.extension.systemproperties.SystemPropertiesIntegrationTestBase, org.jboss.arquillian.showcase.extension.systemproperties.SystemPropertiesJMXTestCase]]
+00:19:20,394 INFO  [org.jboss.web] (MSC service thread 1-4) JBAS018210: Registering web context: /a21656c3-53d7-446a-a668-7c7e5a1402d0
+00:19:20,556 INFO  [org.jboss.as.server] (management-handler-thread - 3) JBAS018559: Deployed "a21656c3-53d7-446a-a668-7c7e5a1402d0.war"
+00:19:20,830 INFORMAZIONI [org.jboss.arquillian.testenricher.cdi.container.BeanManagerProducer] (pool-4-thread-1) BeanManager not found.
+00:19:20,966 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-3) JBAS015877: Stopped deployment a21656c3-53d7-446a-a668-7c7e5a1402d0.war in 36ms
+00:19:21,026 INFO  [org.jboss.as.repository] (management-handler-thread - 1) JBAS014901: Content removed from location C:\Lavoro\WORKSPACES\mongorest-workspace\mongodbmain\extensions\systemproperties\target\jboss-as-7.1.1.Final\standalone\data\content\1d\1fd168a477ddf6f5ea363f9b96be54ab61b9f5\content
+00:19:21,027 INFO  [org.jboss.as.server] (management-handler-thread - 1) JBAS018558: Undeployed "a21656c3-53d7-446a-a668-7c7e5a1402d0.war"
+00:19:21,740 INFO  [org.jboss.as.repository] (management-handler-thread - 2) JBAS014900: Content added at location C:\Lavoro\WORKSPACES\mongorest-workspace\mongodbmain\extensions\systemproperties\target\jboss-as-7.1.1.Final\standalone\data\content\f4\c80e850087357485e27723d6c261d18e9c3471\content
+00:19:21,743 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-5) JBAS015876: Starting deployment of "900bb4b5-acae-41a3-a09a-ab9b8435d045.war"
+00:19:21,967 INFO  [org.jboss.as.arquillian] (MSC service thread 1-6) Arquillian deployment detected: ArquillianConfig[service=jboss.arquillian.config."900bb4b5-acae-41a3-a09a-ab9b8435d045.war",unit=900bb4b5-acae-41a3-a09a-ab9b8435d045.war,tests=[org.jboss.arquillian.showcase.extension.systemproperties.SystemPropertiesIntegrationTestBase, org.jboss.arquillian.test.impl.EventTestRunnerAdaptorTestCase, org.jboss.arquillian.test.impl.enricher.resource.ArquillianResourceTestEnricherTestCase, org.jboss.arquillian.test.impl.TestInstanceEnricherTestCase, org.jboss.arquillian.showcase.extension.systemproperties.SystemPropertiesServletTestCase]]
+00:19:21,984 INFO  [org.jboss.web] (MSC service thread 1-4) JBAS018210: Registering web context: /900bb4b5-acae-41a3-a09a-ab9b8435d045
+00:19:22,204 INFO  [org.jboss.as.server] (management-handler-thread - 2) JBAS018559: Deployed "900bb4b5-acae-41a3-a09a-ab9b8435d045.war"
+00:19:22,423 INFORMAZIONI [org.jboss.arquillian.testenricher.cdi.container.BeanManagerProducer] (http--127.0.0.1-8080-2) BeanManager not found.
+00:19:22,493 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-2) JBAS015877: Stopped deployment 900bb4b5-acae-41a3-a09a-ab9b8435d045.war in 42ms
+00:19:22,570 INFO  [org.jboss.as.repository] (management-handler-thread - 4) JBAS014901: Content removed from location C:\Lavoro\WORKSPACES\mongorest-workspace\mongodbmain\extensions\systemproperties\target\jboss-as-7.1.1.Final\standalone\data\content\f4\c80e850087357485e27723d6c261d18e9c3471\content
+00:19:22,571 INFO  [org.jboss.as.server] (management-handler-thread - 4) JBAS018558: Undeployed "900bb4b5-acae-41a3-a09a-ab9b8435d045.war"
+00:19:22,593 INFO  [org.jboss.as.server.deployment] (MSC service thread 1-4) JBAS015877: Stopped deployment arquillian-service in 7ms
+00:19:22,718 INFO  [org.jboss.as.repository] (management-handler-thread - 1) JBAS014901: Content removed from location C:\Lavoro\WORKSPACES\mongorest-workspace\mongodbmain\extensions\systemproperties\target\jboss-as-7.1.1.Final\standalone\data\content\bc\3b78c976d8a792a5e24efc787961ac33c56ee8\content
+00:19:22,719 INFO  [org.jboss.as.server] (management-handler-thread - 1) JBAS018558: Undeployed "arquillian-service"

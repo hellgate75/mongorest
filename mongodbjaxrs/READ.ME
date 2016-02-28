@@ -1,0 +1,10 @@
+                         IMPORTANT NOTE :
+                         ----------------
+
+#######################################################################
+# GLassfish 4 needs following JVM property is startup parameters :    #
+# -Dcom.sun.jersey.server.impl.cdi.lookupExtensionInBeanManager=true  #
+# to avoid to reload and lookup for CDIConfiguration bean not ever    #
+# available each redeploy it recreate the JAX-RS Jersey Service       #
+# configuration parameters.                                           #
+#######################################################################
