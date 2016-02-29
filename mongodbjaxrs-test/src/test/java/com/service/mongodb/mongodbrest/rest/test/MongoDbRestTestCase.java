@@ -11,12 +11,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import javax.json.Json;
-import javax.ws.rs.core.Form;
 import javax.ws.rs.core.MediaType;
 
-import org.apache.commons.httpclient.methods.RequestEntity;
-import org.apache.commons.httpclient.methods.StringRequestEntity;
 import org.bson.Document;
 import org.jboss.arquillian.container.test.api.Deployment;
 import org.jboss.arquillian.junit.Arquillian;
@@ -31,10 +27,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.access.mongodb.mongolib.db.MyDocument;
-import com.mongodb.util.JSON;
 import com.service.mongodb.mongodbrest.rest.model.GenericXML;
 import com.service.mongodb.mongodbrest.rest.model.ModelInterceptor;
-import com.service.mongodb.mongodbrest.rest.model.ResponseBase;
 import com.sun.jersey.api.client.Client;
 import com.sun.jersey.api.client.ClientResponse;
 import com.sun.jersey.api.client.WebResource;
@@ -89,7 +83,7 @@ public class MongoDbRestTestCase {
 	        .enableAuth(false)
 	        .useNoJournal(false)
 	        .enableTextSearch(true)
-	        .verbose(true)
+	        .verbose(false)
 	        .build();
 	        IMongodConfig mongoConfig = new MongodConfigBuilder()
 			.net(new Net(MONGO_PORT, Network.localhostIsIPv6()))
@@ -218,15 +212,6 @@ public class MongoDbRestTestCase {
 	protected static boolean insertDataInTheService(String collection, String id, String json) throws Exception 
 	{
 		logger.info("shouldGetAuthorXMLListCorrect ....");
-//		Client client = Client.create();
-//
-//		WebResource webResource = client
-//				.resource("http://localhost:8085/mongodbjaxrs/resources/MongoDbRest/"+collection+"/"+id);
-//		RequestEntity request = new StringRequestEntity(json, null, null);
-//		Form form = new Form();
-//		Document doc = Document.parse(json);
-//		ClientResponse response = webResource.type(MediaType.TEXT_HTML_TYPE).accept(MediaType.APPLICATION_JSON_TYPE)
-//				.post(ClientResponse.class, request);//, input);
 		ClientConfig clientConfig = new DefaultClientConfig();
         clientConfig.getFeatures().put(JSONConfiguration.FEATURE_POJO_MAPPING, Boolean.TRUE);
         Client client = Client.create(clientConfig);
